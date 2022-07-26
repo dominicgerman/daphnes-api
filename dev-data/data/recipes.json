@@ -1,0 +1,102 @@
+[
+  {
+    "id": 0,
+    "name": "Old Fashioned",
+    "difficulty": "easy",
+    "strength": "☠☠",
+    "tags": ["boozy", "classics", "whiskey"],
+    "similarTo": [],
+    "description": "Spirit, bitters, sugar, and water are the 4 ingredients needed for this most fundemental of cocktails.",
+    "about": "The Old-Fashioned is as traditional as they come. A simple mix of spirits, sugar, bitters and water, it appears in 1806 as the first printed recipe for a cocktail. Other alcohols were permitted, but the whiskey or rye version of this combination, over ice, is what we now know as the Old Fashioned, thought to be named later that century after more elaborate new-fangled cocktails entered the canon. During Prohibition, the recipe veered into odd territory, adding fruit and cherries to distract from the available crude spirits. After repeal, it was the imposter version that stuck until the recent cocktail revival brought the original recipe back from the brink of extinction.",
+    "instructions": "Combine all the ingredients in a mixing glass filled with ice and stir until chilled. Strain into a chilled rocks glass over fresh ice, preferably a large cube. If you’re in a rush, skip the mixing glass and just combine the ingredients in a rocks glass with a large ice cube and stir for 20 seconds. Garnish with an orange peel.",
+    "imageCover": "old-fashioned.jpg",
+    "ingredients": [
+      {
+        "name": "bourbon",
+        "measure": "2 oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "measure": "3 dashes"
+      },
+      {
+        "name": "demerara syrup",
+        "measure": "¼ oz"
+      },
+      {
+        "name": "orange peel to garnish",
+        "measure": "1 swath"
+      },
+      {
+        "name": "brandied cherry to garnish",
+        "measure": "1"
+      }
+    ]
+  },
+  {
+    "id": 0,
+    "name": "Mexican Firing Squad",
+    "difficulty": "easy",
+    "strength": "☠",
+    "tags": ["tequila", "refreshing", "sweet"],
+    "similarTo": [],
+    "description": "A sweet, crisp cousin to the margarita",
+    "about": "The Mexican Firing Squad is one of the many cocktails documented by world traveler, cocktail writer and historian Charles H. Baker. The drink is recorded in his Gentleman’s Companion, Volume II as having been discovered at the La Cucaracha Bar in Mexico City in 1937. A dry formula, the Firing Squad is almost a rickey with the addition of grenadine to sweeten only slightly. Some modern versions include the addition of soda to create a longer, cooling drink.",
+    "instructions": "Combine the tequila, lime juice, grenadine, and bitters in a shaker filled with ice. Shake vigorously for 5 - 10 seconds. Strain into a collins or highball glass filled with fresh ice. Top with club soda and garnish with a lime wheel.",
+    "imageCover": "mexican-firing-squad.jpg",
+    "ingredients": [
+      {
+        "name": "blanco tequila",
+        "measure": "2 oz"
+      },
+      {
+        "name": "lime juice",
+        "measure": "¾ oz"
+      },
+      {
+        "name": "grenadine",
+        "measure": "¾ oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "measure": "2 dashes"
+      },
+      {
+        "name": "club soda"
+      },
+      {
+        "name": "lime wheel to garnish"
+      }
+    ]
+  },
+  {
+    "id": 0,
+    "name": "Bee's Knees",
+    "difficulty": "easy",
+    "strength": "☠",
+    "tags": ["gin", "refreshing", "honey"],
+    "similarTo": [],
+    "description": "A 3-ingredient drink that is as crushable as it is easy to make.",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "instructions": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    "imageCover": "bees-knees.jpg",
+    "ingredients": [
+      {
+        "name": "london dry gin",
+        "measure": "2 oz"
+      },
+      {
+        "name": "lemon juice",
+        "measure": "¾ oz"
+      },
+      {
+        "name": "honey syrup",
+        "measure": "¾ oz"
+      },
+      {
+        "name": "lemon peel to garnish",
+        "measure": "1 swath"
+      }
+    ]
+  }
+]
