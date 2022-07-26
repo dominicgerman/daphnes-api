@@ -71,7 +71,6 @@ exports.getOne = (Model, populateOptions) =>
 
 exports.getAll = (Model) =>
   catchAsync(async (req, res, next) => {
-    console.log(`req.query`, req.query);
     // EXECUTE QUERY
     const features = new APIFeatures(Model.find(), req.query)
       .filter()

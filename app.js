@@ -6,6 +6,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
+const compression = require('compression');
+
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const recipeRouter = require('./routes/recipeRoutes');
@@ -59,6 +61,8 @@ app.use(express.static(`${__dirname}/public`));
 app.use((req, res, next) => {
   next();
 });
+
+app.use(compression());
 
 // 2) ROUTE HANDLERS (controllers)
 // (they now live in the controllers folder)
