@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Precentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: 'Vollkorn', serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgb(32, 32, 32);
+
+  /* Only works if nothing is absolutely positioned in relation to body */
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+img {
+  height: 3.6rem;
+}
+
+code {
+  background-color: #dcdcdc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 0 0 4rem 0;
+  margin: 0 auto;
+}
+
+.header-logo {
+  height: 3.6rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+table {
+  max-width: 50%;
+}
+
+table,
+td {
+  border: 0.05rem solid #333;
+  padding: 0.5rem;
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+td.param {
+  max-width: 70%;
+}

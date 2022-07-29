@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -12,15 +13,23 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const recipeRouter = require('./routes/recipeRoutes');
 const userRouter = require('./routes/userRoutes');
-// const searchRouter = require('./routes/searchRoute');
+const searchRouter = require('./routes/searchRoute');
+const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
 // 1) GLOBAL MIDDLEWARE
+
 // Implement CORS
 app.use(cors());
 // Access-Control-Allow-Origin
 app.options('*', cors());
+
+// Serving static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Set security HTTP headers
 app.use(helmet());
@@ -54,9 +63,6 @@ app.use(
   })
 );
 
-// Serving static files
-app.use(express.static(`${__dirname}/public`));
-
 // TEST middleware
 app.use((req, res, next) => {
   next();
@@ -69,9 +75,10 @@ app.use(compression());
 
 // 3) ROUTES
 // this is where we "mount" our routers
+app.use('/', viewRouter);
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/api/v1/users', userRouter);
-// app.use('/api/v1/search', searchRouter);
+app.use('/api/v1/search', searchRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

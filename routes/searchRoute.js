@@ -1,8 +1,8 @@
-// const express = require('express');
-// const searchController = require('../controllers/searchController');
+const express = require('express');
+const searchController = require('../controllers/searchController');
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.route('/').get(searchController.recipeSearch);
+router.route('/:q').get(searchController.recipeSearch);
 
-// module.exports = router;
+module.exports = router;
