@@ -1,0 +1,54 @@
+extends base
+
+block content
+    section.main
+        h2 Create a new recipe
+        
+        form.create-recipe__form
+            div.name
+                label(for='name') Name
+                input.name__input(type='text', name='name', placeholder='Gimlet', required)
+            div.difficulty
+                label(for='difficulty') Difficulty
+                input.difficulty__input(type='text', name='difficulty', placeholder='intermediate')
+            div.strength
+                label(for='strength') Strength
+                input.strength__input(type='text', name='strength', value='☠')
+            div.tags
+                label(for='tags') Tags
+                input.tags__input(type='text', name='tags', placeholder='gin, lime cordial, sours', required)
+            div.img-cover
+                label(for='img') Image path
+                input.img__input(type='text', name='imageCover' placeholder='"gimlet.jpg" (use quotes)', required)
+            div.description
+                label(for='description') Description
+                input.description__input(type='text', name='description', placeholder='A classic gin sour featuring homemade lime cordial.', required)
+            div.about
+                label(for='about') About
+                input.about__input(type='text', name='about', placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', required)
+            div.intructions
+                label(for='intructions') Instructions
+                input.instructions__input(type='text', name='instructions', placeholder='Combine all the ingredients in a mixing glass filled with ice and stir for 25-30 seconds, or until well chilled. Strain into a chilled coupe. Garnish with a lime wheel.', required)
+            div.similar-to
+                label(for='similar') Similar To
+                input.similar__input(type='text', name='similarTo' placeholder='62ce22defef354969cf4990a, 62cde12969a0f9939212200c', required)
+        div.ingredients
+            div.ingredient-forms 
+                form.ingredient--item 
+                    label(for='ingredient-name') Ingredient name
+                    input.ingredient-name__input(type='text', name='name',  placeholder='gin', required)
+                    label(for='ingredient-measure') Ingredient measure
+                    input.ingredient-measure__input(type='text', name='measure', placeholder='2 oz', required)   
+                form.ingredient--item 
+                    label(for='ingredient-name') Ingredient name
+                    input.ingredient-name__input(type='text', name='name', placeholder='housemade lime cordial', required)
+                    label(for='ingredient-measure') Ingredient measure
+                    input.ingredient-measure__input(type='text', name='measure', placeholder='1½ oz', required)   
+                form.ingredient--item 
+                    label(for='ingredient-name') Ingredient name
+                    input.ingredient-name__input(type='text', name='name', placeholder='lime wheel', required)
+                    label(for='ingredient-measure') Ingredient measure
+                    input.ingredient-measure__input(type='text', name='measure', placeholder='')   
+            button.add-another-ingredient__button(type='button', onclick='addAnotherIngredient()') Add Another Ingredient
+
+        button.submit-recipe__button(type='button', onclick='handleFormSubmission()') Submit

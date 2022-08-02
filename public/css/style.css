@@ -37,10 +37,22 @@ img {
   height: 3.6rem;
 }
 
-code {
+input {
+  border: none;
+}
+
+code,
+input {
   background-color: #dcdcdc;
   padding: 0.5rem;
   border-radius: 0.5rem;
+}
+
+button {
+  max-width: 12rem;
+  border: 0.1rem solid rgb(32, 32, 32);
+  border-radius: 0.5rem;
+  font: inherit;
 }
 
 .container {
@@ -85,4 +97,64 @@ tfoot {
 
 td.param {
   max-width: 70%;
+}
+
+/* LOGIN SCREEN */
+
+.login__form,
+.create-recipe__form,
+.ingredients,
+.ingredient-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.email,
+.password,
+.name,
+.difficulty,
+.strength,
+.tags,
+.description,
+.about,
+.intructions,
+.ingredient--item__el,
+.similar-to,
+.img-cover {
+  display: flex;
+  gap: 1rem;
+}
+
+/* CREATE RECIPE SCREEN */
+
+.create-recipe__form {
+  max-width: 80rem;
+}
+
+.ingredient--item {
+  display: flex;
+  gap: 1rem;
+}
+
+.ingredient-name__input {
+  margin-right: 3rem;
+}
+
+.add-another-ingredient__button {
+  max-width: fit-content;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.description__input,
+.about__input,
+.instructions__input,
+.similar__input {
+  flex-grow: 1;
+}
+
+.ingredient-forms {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

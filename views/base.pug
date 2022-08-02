@@ -16,38 +16,48 @@ html
         link(href='https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap' rel='stylesheet')
 
 
-        link(rel='stylesheet' href='../css/styles.css')
+        link(rel='stylesheet' href='../css/style.css')
 
         title Daphne's API
-    
+
     body 
         div.container
             // HEADER
             include _header
-            section.main
-                p This is the Daphne's API which is a cocktail API for accessing recipes from the Chicago home bar Daphne's.
-                h2 Get All Recipes
-                p Returns the details for all recipes in the database
-                p Path : 
-                    code https://warm-hamlet-34458.herokuapp.com/api/v1/recipes/
-                h2 Get Recipe by ID
-                p Returns the details for a specific recipe in the database
-                p Path : 
-                    code https://warm-hamlet-34458.herokuapp.com/api/v1/recipes/id
-                table
-                    thead
-                        tr
-                            th(colspan="2") Parameters 
 
-                    tbody
-                        tr
-                            td.param Param 
-                            td Example
-                        tr
-                            td.param id 
-                            td 
-                                code 82c7920jjd883836159f8hcc
+            // CONTENT
+            block content
+                section.main
+                    p This is the Daphne's API which is a cocktail API for accessing recipes from the Chicago home bar Daphne's. Log in <a href="/login"> here.</a>
+                    h2 Get All Recipes
+                    p Returns the details for all recipes in the database
+                    p Path : 
+                        code https://warm-hamlet-34458.herokuapp.com/api/v1/recipes/
+                    h2 Get Recipe by ID
+                    p Returns the details for a specific recipe in the database
+                    p Path : 
+                        code https://warm-hamlet-34458.herokuapp.com/api/v1/recipes/id
+                    table
+                        thead
+                            tr
+                                th(colspan="2") Parameters 
+
+                        tbody
+                            tr
+                                td.param Param 
+                                td Example
+                            tr
+                                td.param id 
+                                td 
+                                    code 82c7920jjd883836159f8hcc 
+
+            // FOOTER
             include _footer
+
+            
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js')
+            script(src='/js/login.js')
+            script(src='/js/createRecipe.js')
 
 
 

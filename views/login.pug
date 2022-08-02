@@ -1,0 +1,13 @@
+extends base
+
+block content
+    section.main
+        h2 Log into your account
+        form.login__form
+            div.email
+                label(for='email') Email address
+                input.email__input(type='email', placeholder='you@example.com', required)
+            div.password
+                label(for='password') Password
+                input.password__input(type='password', placeholder='••••••••', required, minlength='8')
+            button.login--button Login
