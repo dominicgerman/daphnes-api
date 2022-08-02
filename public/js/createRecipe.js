@@ -36,7 +36,7 @@ const postRecipe = async (recipeObj) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'https://daphnes-api.herokuapp.com/api/v1/recipes',
+      url: '/api/v1/recipes',
       data: recipeObj,
     });
 
