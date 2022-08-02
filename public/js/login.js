@@ -1,11 +1,10 @@
 /* eslint-disable */
-const axios = require('axios');
 
 const login = async (email, password) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'api/v1/users/login',
+      url: '/api/v1/users/login',
       data: {
         email,
         password,
