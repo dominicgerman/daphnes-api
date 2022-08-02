@@ -1,45 +1,21 @@
 exports.getRoot = (req, res) => {
-  res
-    .status(200)
-    .set(
-      'Content-Security-Policy',
-      "connect-src 'self' https://cdnjs.cloudfare.com"
-    )
-    .render('base', {});
+  res.status(200).render('base', {});
 };
 
 exports.getLoginForm = (req, res) => {
-  res
-    .status(200)
-    .set(
-      'Content-Security-Policy',
-      "connect-src 'self' https://cdnjs.cloudfare.com"
-    )
-    .render('login', {
-      title: 'Login',
-    });
+  res.status(200).render('login', {
+    title: 'Login',
+  });
 };
 
 exports.getAdmin = (req, res) => {
-  res
-    .status(200)
-    .set(
-      'Content-Security-Policy',
-      "connect-src 'self' https://cdnjs.cloudfare.com"
-    )
-    .render('admin', {
-      title: 'Admin resources',
-    });
+  res.status(200).render('admin', {
+    title: 'Admin resources',
+  });
 };
 
 exports.getCreateRecipeForm = (req, res) => {
-  res
-    .status(200)
-    .set(
-      'Content-Security-Policy',
-      "connect-src 'self' https://cdnjs.cloudfare.com"
-    )
-    .render('createRecipe', {
-      title: 'Create a new recipe',
-    });
+  res.status(200).render('createRecipe', {
+    title: 'Create a new recipe',
+  });
 };
