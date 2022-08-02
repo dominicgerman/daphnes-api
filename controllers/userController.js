@@ -50,13 +50,6 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.createUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not yet defined!',
-  });
-};
-
 exports.getAllUsers = factory.getAll(User);
 exports.getUser = factory.getOne(User);
 // Do NOT update passwords with this!
