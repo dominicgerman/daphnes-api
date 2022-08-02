@@ -9,6 +9,7 @@ const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const compression = require('compression');
+const csp = require('express-csp');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -33,55 +34,72 @@ app.options('*', cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set security HTTP headers
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'", 'data:', 'blob:', 'https:', 'ws:'],
-        baseUri: ["'self'"],
-        fontSrc: ["'self'", 'https:', 'data:'],
-        scriptSrc: [
-          "'self'",
-          'https:',
-          'http:',
-          'blob:',
-          'https://*.mapbox.com',
-          'https://js.stripe.com',
-          'https://m.stripe.network',
-          'https://*.cloudflare.com',
-        ],
-        frameSrc: ["'self'", 'https://js.stripe.com'],
-        objectSrc: ["'none'"],
-        styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
-        workerSrc: [
-          "'self'",
-          'data:',
-          'blob:',
-          'https://*.tiles.mapbox.com',
-          'https://api.mapbox.com',
-          'https://events.mapbox.com',
-          'https://m.stripe.network',
-        ],
-        childSrc: ["'self'", 'blob:'],
-        imgSrc: ["'self'", 'data:', 'blob:'],
-        formAction: ["'self'"],
-        connectSrc: [
-          "'self'",
-          "'unsafe-inline'",
-          'data:',
-          'blob:',
-          'https://*.stripe.com',
-          'https://*.mapbox.com',
-          'https://*.cloudflare.com/',
-          'https://bundle.js:*',
-          'ws://127.0.0.1:*/',
-        ],
-        upgradeInsecureRequests: [],
-      },
+app.use(helmet());
+csp.extend(app, {
+  policy: {
+    directives: {
+      'default-src': ['self'],
+      'style-src': ['self', 'unsafe-inline', 'https:'],
+      'font-src': ['self', 'https://fonts.gstatic.com'],
+      'script-src': [
+        'self',
+        'unsafe-inline',
+        'data',
+        'blob',
+        'https://js.stripe.com',
+        'https://*.mapbox.com',
+        'https://*.cloudflare.com/',
+        'https://bundle.js:8828',
+        'ws://localhost:56558/',
+      ],
+      'worker-src': [
+        'self',
+        'unsafe-inline',
+        'data:',
+        'blob:',
+        'https://*.stripe.com',
+        'https://*.mapbox.com',
+        'https://*.cloudflare.com/',
+        'https://bundle.js:*',
+        'ws://localhost:*/',
+      ],
+      'frame-src': [
+        'self',
+        'unsafe-inline',
+        'data:',
+        'blob:',
+        'https://*.stripe.com',
+        'https://*.mapbox.com',
+        'https://*.cloudflare.com/',
+        'https://bundle.js:*',
+        'ws://localhost:*/',
+      ],
+      'img-src': [
+        'self',
+        'unsafe-inline',
+        'data:',
+        'blob:',
+        'https://*.stripe.com',
+        'https://*.mapbox.com',
+        'https://*.cloudflare.com/',
+        'https://bundle.js:*',
+        'ws://localhost:*/',
+      ],
+      'connect-src': [
+        'self',
+        'unsafe-inline',
+        'data:',
+        'blob:',
+        `wss://daphnes-api.herokuapp.com:${process.env.PORT || 3000}/`,
+        'https://*.stripe.com',
+        'https://*.mapbox.com',
+        'https://*.cloudflare.com/',
+        'https://bundle.js:*',
+        'ws://localhost:*/',
+      ],
     },
-  })
-);
-
+  },
+});
 // Development logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -114,7 +132,6 @@ app.use(
 
 // TEST middleware
 app.use((req, res, next) => {
-  console.log(req.cookies);
   next();
 });
 
