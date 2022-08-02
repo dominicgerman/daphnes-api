@@ -1,4 +1,5 @@
 /* eslint-disable */
+const axios = require('axios');
 
 const login = async (email, password) => {
   try {
