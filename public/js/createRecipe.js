@@ -15,6 +15,7 @@ const addAnotherIngredient = () => {
 };
 
 const getIngredients = () => {
+  // 1)
   const [...ingredientForms] = document.querySelectorAll('.ingredient--item');
   const ingredients = ingredientForms.map((el) => {
     const [...ingOutput] = new FormData(el);

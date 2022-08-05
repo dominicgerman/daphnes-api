@@ -121,7 +121,8 @@ td.param {
 .intructions,
 .ingredient--item__el,
 .similar-to,
-.img-cover {
+.img-cover,
+.menu-description {
   display: flex;
   gap: 1rem;
 }
@@ -150,7 +151,8 @@ td.param {
 .description__input,
 .about__input,
 .instructions__input,
-.similar__input {
+.similar__input,
+.menu-description__input {
   flex-grow: 1;
 }
 
