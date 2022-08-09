@@ -116,6 +116,14 @@ td.param {
   gap: 2rem;
 }
 
+.login__form input {
+  flex-basis: auto;
+}
+
+.login__form label {
+  flex-basis: 10rem;
+}
+
 .email,
 .password,
 .name,
