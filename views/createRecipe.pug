@@ -14,12 +14,12 @@ block content
             div.strength
                 label(for='strength') Strength
                 input.strength__input(type='text', name='strength', value='☠')
-            div.tags
-                label(for='tags') Tags
-                input.tags__input(type='text', name='tags', placeholder='gin, lime cordial, sours', required)
             div.img-cover
                 label(for='img') Image path
                 input.img__input(type='text', name='imageCover' placeholder='"gimlet.jpg" (use quotes)', required)
+            div.tags
+                label(for='tags') Tags
+                input.tags__input(type='text', name='tags', placeholder='gin, lime cordial, sours', required)
             div.description
                 label(for='description') Description
                 input.description__input(type='text', name='description', placeholder='A classic gin sour featuring homemade lime cordial.', required)
@@ -28,10 +28,10 @@ block content
                 input.menu-description__input(type='text', name='menuDescription', placeholder='gin, lime cordial', required)
             div.about
                 label(for='about') About
-                input.about__input(type='text', name='about', placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', required)
+                textarea.about__input(name='about', cols="20", rows="10", placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', required)
             div.intructions
                 label(for='intructions') Instructions
-                input.instructions__input(type='text', name='instructions', placeholder='Combine all the ingredients in a mixing glass filled with ice and stir for 25-30 seconds, or until well chilled. Strain into a chilled coupe. Garnish with a lime wheel.', required)
+                textarea.instructions__input(name='instructions', cols="20", rows="5", placeholder='Combine all the ingredients in a mixing glass filled with ice and stir for 25-30 seconds, or until well chilled. Strain into a chilled coupe. Garnish with a lime wheel.', required)
             div.similar-to
                 label(for='similar') Similar To
                 input.similar__input(type='text', name='similarTo' placeholder='62ce22defef354969cf4990a, 62cde12969a0f9939212200c', required)

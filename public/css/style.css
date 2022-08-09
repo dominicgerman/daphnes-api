@@ -37,12 +37,18 @@ img {
   height: 3.6rem;
 }
 
-input {
+label {
+  flex-basis: 8rem;
+}
+
+input,
+textarea {
   border: none;
 }
 
 code,
-input {
+input,
+textarea {
   background-color: #dcdcdc;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -159,4 +165,8 @@ td.param {
 .ingredient-forms {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.ingredients label {
+  flex-basis: auto;
 }
